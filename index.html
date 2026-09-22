@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HesapAI Gizlilik Politikası</title>
+<meta name="description" content="HesapAI mühendislik hesaplama uygulamasının gizlilik politikası.">
+<link rel="icon" type="image/png" href="simge.png">
+<style>
+  :root {
+    --zemin: #F4F7FC;
+    --kagit: #FFFFFF;
+    --metin: #1A2A44;
+    --soluk: #5A6B85;
+    --mavi: #005BF5;
+    --cizgi: #E2E9F4;
+    --vurgu: #EDF3FE;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --zemin: #0E1626;
+      --kagit: #152036;
+      --metin: #E6ECF7;
+      --soluk: #9DADC7;
+      --mavi: #5B9BFF;
+      --cizgi: #24324D;
+      --vurgu: #1A2945;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--zemin);
+    color: var(--metin);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 28px 16px 56px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  header img { width: 44px; height: 44px; border-radius: 10px; }
+  header span { font-weight: 800; letter-spacing: -0.02em; font-size: 20px; }
+  article {
+    background: var(--kagit);
+    border: 1px solid var(--cizgi);
+    border-radius: 14px;
+    padding: 8px 22px 22px;
+  }
+  h1 { font-size: 26px; line-height: 1.25; margin: 18px 0 6px; text-wrap: balance; }
+  h2 { font-size: 19px; margin: 30px 0 6px; text-wrap: balance; }
+  p, li { max-width: 65ch; }
+  hr { border: 0; border-top: 1px solid var(--cizgi); margin: 22px 0; }
+  a { color: var(--mavi); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  a:focus-visible { outline: 2px solid var(--mavi); outline-offset: 2px; border-radius: 3px; }
+  code {
+    background: var(--vurgu);
+    border-radius: 5px;
+    padding: 1px 5px;
+    font-size: 0.92em;
+  }
+  footer { color: var(--soluk); font-size: 14px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="simge.png" alt="" width="44" height="44">
+    <span>HesapAI</span>
+  </header>
+  <article>
+<h1>HesapAI — Gizlilik Politikası</h1>
+<p><strong>Son güncelleme:</strong> 22 Eylül 2026</p>
+<p>Bu politika, Android ve iOS için yayınlanan <strong>HesapAI</strong> mühendislik
+hesaplama uygulamasının verilerinizi nasıl işlediğini açıklar.</p>
+<hr>
+<h2>Kısa cevap</h2>
+<p>HesapAI <strong>hesap yapan bir araçtır, veri toplayan bir uygulama değildir.</strong>
+Hesap istemiyor, kayıt istemiyor, reklam göstermiyor, sizi takip etmiyor.
+Bütün hesaplar telefonunuzun içinde yapılır.</p>
+<p>Tek istisna, <strong>varsayılan olarak kapalı</strong> olan yapay zekâ desteğidir; onu
+siz açmadıkça yazdığınız hiçbir cümle telefonunuzdan çıkmaz.</p>
+<hr>
+<h2>1. Toplamadığımız şeyler</h2>
+<p>HesapAI şunları <strong>toplamıyor, saklamıyor ve göndermiyor</strong>:</p>
+<ul>
+<li>ad, e-posta, telefon numarası veya herhangi bir hesap bilgisi</li>
+<li>konum</li>
+<li>kişiler, fotoğraflar, dosyalar, takvim</li>
+<li>cihaz kimliği, reklam kimliği</li>
+<li>kullanım analitiği, çökme raporu, ısı haritası</li>
+</ul>
+<p>Uygulamada hiçbir analitik, reklam veya takip aracı (SDK) bulunmuyor.</p>
+<h2>2. Cihazınızda kalan veriler</h2>
+<ul>
+<li><strong>Hesap geçmişi.</strong> Yaptığınız hesaplar telefonunuzun kendi veri
+  alanındaki bir veritabanına yazılır. Bu kayıtlar telefonunuzdan
+  çıkmaz. Uygulamayı kaldırdığınızda silinirler.</li>
+<li><strong>Ayarlarınız.</strong> Tercihleriniz telefonda saklanır.</li>
+<li><strong>API anahtarınız</strong> (yalnızca yapay zekâ desteğini kullanıyorsanız).
+  Anahtar, işletim sisteminin <strong>güvenli deposunda</strong> tutulur
+  (Android'de Keystore, iOS'ta Keychain). Bize gönderilmez; yalnızca
+  aşağıda anlatılan istek sırasında doğrudan Anthropic'e iletilir.
+  Ayarlar ekranından silebilirsiniz.</li>
+</ul>
+<h2>3. Yapay zekâ desteği (varsayılan: KAPALI)</h2>
+<p>Uygulamanın Türkçe cümle çözümlemesi <strong>telefonun içinde</strong> çalışır ve
+internet gerektirmez. Cihaz içi çözümleyici bir cümleyi anlayamazsa —
+ve <strong>yalnızca siz bu özelliği açıp kendi API anahtarınızı girdiyseniz</strong> —
+uygulama o cümleyi çözümlenmek üzere Anthropic'in API'sine gönderir.</p>
+<p><strong>Gönderilen:</strong> yalnızca o anda yazdığınız cümle.
+<strong>Gönderilmeyen:</strong> hesap sonuçlarınız, geçmişiniz, ayarlarınız, cihaz
+bilgileriniz, kimliğinizi belirleyebilecek hiçbir şey.</p>
+<p>Yapay zekâ <strong>sayı hesaplamaz.</strong> Görevi yalnızca cümledeki değerleri ve
+ne sorulduğunu tanımaktır; hesabın kendisi her zaman uygulamanın içindeki
+formüllerle yapılır ve her adımı ekranda gösterilir.</p>
+<p>Bu istek doğrudan sizin cihazınızdan Anthropic'e gider; arada bizim bir
+sunucumuz yoktur ve cümlenizi biz göremeyiz. Anthropic'in bu veriyi nasıl
+işlediği kendi gizlilik politikasına tabidir:
+<a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
+<p>Özelliği Ayarlar'dan kapattığınızda ya da anahtarınızı sildiğinizde
+uygulama cümlelerinizi bir daha göndermez.</p>
+<h2>4. İnternet izni</h2>
+<p>Uygulama Android'de <code>INTERNET</code> iznini ister. Bu izin <strong>yalnızca</strong> yukarıda
+anlatılan, sizin açtığınız yapay zekâ desteği için kullanılır.</p>
+<p>Tek bir istisna var ve o da sizin elinizde: Ayarlar ekranındaki
+<strong>"Bağlantıyı sına"</strong> düğmesine basarsanız, anahtarınızın çalışıp
+çalışmadığını görmek için Anthropic'e tek bir istek gönderilir. Bu istek
+sizin cümlenizi değil, <strong>sabit bir deneme metnini</strong> taşır. Bu düğmeye
+basmadıkça ve yapay zekâ desteği kapalıyken hiçbir ağ isteği yapılmaz.</p>
+<h2>5. Çocuklar</h2>
+<p>HesapAI çocuklara yönelik bir uygulama değildir ve çocuklardan bilerek
+veri toplamaz.</p>
+<h2>6. Verilerinizi silmek</h2>
+<ul>
+<li><strong>Geçmiş:</strong> Geçmiş ekranından tek tek ya da "Temizle" ile tümü
+  silinebilir.</li>
+<li><strong>API anahtarı:</strong> Ayarlar ekranından silinebilir.</li>
+<li><strong>Hepsi:</strong> uygulamayı kaldırmak cihazdaki tüm HesapAI verilerini siler.</li>
+</ul>
+<p>Bizde saklanan bir veriniz olmadığı için bize silme talebi göndermenize
+gerek yoktur.</p>
+<h2>7. Sorumluluk sınırı</h2>
+<p>HesapAI'nin verdiği sonuçlar <strong>referans niteliğindedir</strong> ve proje onayı,
+mühendislik hesap raporu veya yasal uygunluk belgesi yerine geçmez.
+Kritik uygulamalarda üretici verisiyle ve yürürlükteki standartlarla
+doğrulayınız.</p>
+<h2>8. Değişiklikler</h2>
+<p>Bu politika değişirse bu sayfadaki tarih güncellenir. Uygulamanın veri
+davranışını değiştiren bir güncelleme yapılırsa, değişiklik uygulama
+içinde de belirtilir.</p>
+<h2>9. İletişim</h2>
+<p>Sorularınız için: <strong><a href="mailto:fthmhmt44@gmail.com">fthmhmt44@gmail.com</a></strong></p>
+  </article>
+  <footer>Bu sayfa, uygulamanın deposundaki docs/GIZLILIK-POLITIKASI.md dosyasından üretildi.</footer>
+</main>
+</body>
+</html>
